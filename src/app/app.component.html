@@ -8,7 +8,7 @@
   <ng-container *ngFor="let item of items.data.children">
  <p>Title: {{item.data.title}}</p>
  <img src="{{item.data.thumbnail}}">
-<p>Link: </p> <a>{{item.data.permalink}}</a> 
+<p>Link: </p> <a href="https://www.reddit.com{{item.data.permalink}}">https://www.reddit.com{{item.data.permalink}}</a> 
 </ng-container>
 
 </ng-container>
