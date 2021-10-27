@@ -1,11 +1,14 @@
-<h1>Pauper's Reddit</h1>
+<h1>Welcome to {{title}}</h1>
 
-<button (click) = "getPosts()">See Post</button>
+<button (click) = "getPosts()">Click to Get Posts!</button>
 <!-- Left button in to test api call which appears to be functioning properly -->
-<h2>Welcome to {{title}}</h2>
+
 
 <ng-container *ngIf="items">
-  <!-- Figuring out how to display this data. My thoughts are we need to access the data via something like
-  {{items.data.children.data.title}}, {{items.data.children.data.thumbnail}} and {{items.data.children.data.permalink}} but that does not appear to be correct -->
+  <ng-container *ngFor="let item of items.data.children">
+ <p>Title: {{item.data.title}}</p>
+ <img src="{{item.data.thumbnail}}">
+<p>Link: </p> <a>{{item.data.permalink}}</a> 
+</ng-container>
 
 </ng-container>
